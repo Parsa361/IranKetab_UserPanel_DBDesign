@@ -1,6 +1,8 @@
 from peewee import MySQLDatabase, Model, CharField, ForeignKeyField, DateField
+from playhouse.db_url import connect
 
-db = MySQLDatabase('mysql://root:password@127.0.0.1:3306/iranketab')
+# If we use this structure, we can connect to any RDBMS
+db = connect('mysql://root:password@127.0.0.1:3306/iranketab')
 
 
 class BaseModel(Model):
