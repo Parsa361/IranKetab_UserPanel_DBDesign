@@ -1,0 +1,17 @@
+[
+  {
+    "name": "first",
+    "user": 1,
+    "book": 1
+  },
+  {
+    "name": "first",
+    "user": 1,
+    "book": 2
+  },
+  {
+    "name": "first",
+    "user": 3,
+    "book": 3
+  }
+]
