@@ -2,12 +2,12 @@ from importer import UserImporter, BookImporter, AuthorImporter, LibraryImporter
 
 from models import db, User, Book, BookAuthor, Library, Author, Address, AskBook, Order
 
-from reports import show_users
+from reports import show_users, show_books
 
 
 def create_tables():
     db.create_tables(
-        [User, Book, Library, AskBook, Address, Author, BookAuthor, Order]
+        [User, Library, AskBook, Address, Author, BookAuthor, Order, Book]
     )
 
 
@@ -20,7 +20,14 @@ def load_data():
         print(_class.load())
 
 
+def show_data():
+    print("#" * 50)
+    show_users()
+    print("#" * 50)
+    show_books()
+
+
 if __name__ == '__main__':
     # create_tables()
-    load_data()
-
+    # load_data()
+    show_data()
