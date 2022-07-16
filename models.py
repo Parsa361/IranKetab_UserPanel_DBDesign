@@ -1,4 +1,4 @@
-from peewee import MySQLDatabase, Model, CharField, ForeignKeyField, DateField
+from peewee import Model, CharField, ForeignKeyField, DateField
 from playhouse.db_url import connect
 
 # If we use this structure, we can connect to any RDBMS
