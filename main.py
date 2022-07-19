@@ -2,7 +2,7 @@ from importer import UserImporter, BookImporter, AuthorImporter, LibraryImporter
 
 from models import db, User, Book, BookAuthor, Library, Author, Address, AskBook, Order
 
-from reports import show_users, show_books
+from reports import show_users, show_books, show_user_data
 
 
 def create_tables():
@@ -30,4 +30,5 @@ def show_data():
 if __name__ == '__main__':
     # create_tables()
     # load_data()
-    show_data()
+    # show_data()
+    show_user_data("Ali","ali1234@")
