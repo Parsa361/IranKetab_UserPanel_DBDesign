@@ -17,6 +17,12 @@ class User(BaseModel):
     username = CharField(max_length=32)
     password = CharField(max_length=32)
 
+    @classmethod
+    def authenticate(cls, username,password):
+        return cls.select().where(
+            cls.username == username, cls.password == password
+        ).first()
+
 
 class Book(BaseModel):
     name = CharField(max_length=32)
